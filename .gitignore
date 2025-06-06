@@ -1,8 +1,4 @@
-# Zig 构建输出
-zig-cache/
-zig-out/
-# Leave this in here for older zig versions
-.zig-cache/ # Zig 构建输出
+# Zig构建输出
 zig-cache/
 zig-out/
 .zig-cache/
@@ -17,7 +13,7 @@ build/
 *.o
 *.obj
 
-# IDE 和编辑器文件
+# IDE和编辑器文件
 .vscode/
 .idea/
 *.swp

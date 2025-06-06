@@ -1,7 +1,7 @@
 # half_zig
 
 A comprehensive half-precision floating point and neural network quantization library for Zig.
-
+[简体中文](README_zh.md)
 ## Features
 
 ### Floating Point Types

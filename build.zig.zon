@@ -1,0 +1,16 @@
+.{
+    .name = .half_zig,
+    .version = "0.1.0",
+    .paths = .{
+        "src",
+        "examples",
+        "bench",
+        "build.zig",
+        "build.zig.zon",
+        "LICENSE-APACHE",
+        "LICENSE-MIT",
+        "README.md",
+    },
+    .dependencies = .{},
+    .fingerprint = 0x8f48b89d2823b9a8,
+}

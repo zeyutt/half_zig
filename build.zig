@@ -102,29 +102,29 @@ pub fn build(b: *std.Build) void {
     run_quant_example_step.dependOn(&run_quant_example.step);
 
     // slice example
-    const slice_example = b.addExecutable(.{
-        .name = "slice_example",
-        .root_source_file = b.path("examples/half_slice.zig"),
-        .target = target,
-        .optimize = optimize,
-    });
-    slice_example.root_module.addImport("half_zig", lib.root_module);
+    // const slice_example = b.addExecutable(.{
+    //     .name = "slice_example",
+    //     .root_source_file = b.path("examples/half_slice.zig"),
+    //     .target = target,
+    //     .optimize = optimize,
+    // });
+    // slice_example.root_module.addImport("half_zig", lib.root_module);
 
-    const install_slice_example = b.addInstallArtifact(slice_example, .{});
-    const slice_example_step = b.step("example-slice", "Build slice example");
-    slice_example_step.dependOn(&install_slice_example.step);
+    // const install_slice_example = b.addInstallArtifact(slice_example, .{});
+    // const slice_example_step = b.step("example-slice", "Build slice example");
+    // slice_example_step.dependOn(&install_slice_example.step);
 
-    const run_slice_example = b.addRunArtifact(slice_example);
-    const run_slice_example_step = b.step("run-slice", "Run slice example");
-    run_slice_example_step.dependOn(&run_slice_example.step);
+    // const run_slice_example = b.addRunArtifact(slice_example);
+    // const run_slice_example_step = b.step("run-slice", "Run slice example");
+    // run_slice_example_step.dependOn(&run_slice_example.step);
 
     // All examples
     const example_step = b.step("example", "Build all examples");
     example_step.dependOn(&install_basic_example.step);
     example_step.dependOn(&install_quant_example.step);
-    example_step.dependOn(&install_slice_example.step);
+    // example_step.dependOn(&install_slice_example.step);
     const run_example_step = b.step("run-examples", "Run all examples");
     run_example_step.dependOn(&run_basic_example.step);
     run_example_step.dependOn(&run_quant_example.step);
-    run_example_step.dependOn(&run_slice_example.step);
+    // run_example_step.dependOn(&run_slice_example.step);
 }
