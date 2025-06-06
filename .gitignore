@@ -1,0 +1,5 @@
+# Zig 构建输出
+zig-cache/
+zig-out/
+# Leave this in here for older zig versions
+.zig-cache/ 
